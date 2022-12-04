@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:4000/transactions'
+axios.defaults.baseURL = process.env.BASE_URL | 'http://localhost:4000/transactions'
 
 class ApiError extends Error {
   apiMessage = this.message
