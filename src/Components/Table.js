@@ -8,7 +8,7 @@ export const Table = ({ transactions, lastBlockNumber }) => {
     return date
   }
 
-  const Transaction = transactions.map((tran, index) => {
+  const Transaction = transactions ? transactions.map((tran, index) => {
     return (
       <tr key={index}>
         <td>{tran.block}</td>
@@ -27,7 +27,7 @@ export const Table = ({ transactions, lastBlockNumber }) => {
         <td>{tran.gas}</td>
       </tr>
     )
-  })
+  }) : null
 
   return (
     <div className='tableContainer'>
