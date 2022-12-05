@@ -107,7 +107,6 @@
           border-top: none;
           border-radius: 0 0 10px 10px;
           padding: 8px 12px 0 12px;
-          border-radius: 0 0 10px 10px;
 
           & > .item {
             padding: 8px 0;
@@ -344,5 +343,169 @@
     width: 900px;
     box-sizing: border-box;
     padding: 0 10px;
+  }
+
+  .tableContainer {
+    & > table {
+      & > thead {
+        font-size: 12px;
+        line-height: 16px;
+
+        & > tr > th {
+          padding: 4px 10px;
+        }
+      }
+
+      & > tbody {
+        font-size: 12px;
+        line-height: 16px;
+
+        & > tr > td {
+          padding: 5px 9px 6px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+
+  .tableContainer {
+    overflow-x: scroll;
+
+    & > table {
+      width: 100%;
+      min-width: 650px;
+
+      & > thead {
+        font-size: 10px;
+        line-height: 13px;
+
+        & > tr > th {
+          padding: 3px 8px;
+        }
+      }
+
+      & > tbody {
+        font-size: 10px;
+        line-height: 13px;
+
+        & > tr > td {
+          padding: 4px 7px 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .footer {
+    & > .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > .rights {
+        position: unset;
+        right: auto;
+        transform: none;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .transactions {
+  
+    & > form {
+      height: 35px;
+      margin-bottom: 12px;
+  
+      & > .paramsContainer {
+        border-radius: 7px;
+        padding: 5px 0;
+  
+        & > input {
+          font-size: 12px;
+          line-height: 15px;
+          margin: 0 8px 2px 5px;
+        }
+  
+        & > .separator {
+          height: 25px;
+        }
+  
+        & > .selector {
+          padding: 0px 5px 0 8px;
+          font-size: 12px;
+          line-height: 15px;
+  
+          & > .selected {
+            width: 40px;
+            margin-right: 25px;
+          }
+  
+          & > .list {
+            border-radius: 0 0 8px 8px;
+            padding: 5px 8px 0 8px;
+  
+            & > .item {
+              padding: 5px 0;
+            }
+          }
+  
+          & > img {
+            width: 16px;
+            height: auto;
+          }
+        }
+      }
+  
+      & > .submit {
+        width: 35px;
+        margin-left: 8px;
+        border-radius: 5px;
+  
+        & > img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  
+    & > .pagination {
+      margin: 30px auto;
+  
+      & > .pageContainer {
+        height: 30px;
+        width: 30px;
+        font-size: 12px;
+        line-height: 15px;
+        border-radius: 5px;
+        margin: 0 2px;
+      }
+  
+      & > .active {
+        border: none;
+        color: #ffffff;
+        background: #3a80ba;
+        cursor: default;
+      }
+  
+      & > .arrowContainer {
+        height: 30px;
+        width: 30px;
+        margin: 0 2px;
+  
+        & > .next,
+        .prev {
+          width: 9px;
+        }
+      }
+    }
   }
 }

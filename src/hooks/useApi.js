@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react'
 import axios from 'axios'
 
-// axios.defaults.baseURL = process.env.BASE_URL | 'http://localhost:4000/transactions'
-axios.defaults.baseURL = 'https://bitmedia-test-api-6uo7q.ondigitalocean.app/transactions'
+axios.defaults.baseURL = 'http://localhost:4000/transactions'
+// axios.defaults.baseURL = 'https://bitmedia-test-api-6uo7q.ondigitalocean.app/transactions'
 
 class ApiError extends Error {
   apiMessage = this.message
@@ -33,7 +33,7 @@ export const useApi = () => {
     setLoading(true)
     try {
       const { data } = await axios.get(`/${filter}/${value}?page=${page}`)
-      console.log(data)
+      // console.log(data)
       if (data.error) {
         console.log(data.error)
         throw new ApiError(data.error)

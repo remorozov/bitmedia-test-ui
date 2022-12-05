@@ -7,13 +7,14 @@ export const Table = ({ transactions, lastBlockNumber }) => {
     date = date.join('-')
     return date
   }
+
   const Transaction = transactions.map((tran, index) => {
     return (
       <tr key={index}>
         <td>{tran.block}</td>
         <td>
           <span>
-            <a target='_blank' href={`https://etherscan.io/${tran.hash}`}>
+            <a target='_blank' href={`https://etherscan.io/tx/${tran.hash}`}>
               {tran.hash}
             </a>
           </span>
