@@ -23,7 +23,7 @@ export const Table = ({ transactions, lastBlockNumber }) => {
         <td>{tran.to}</td>
         <td>{lastBlockNumber - tran.block}</td>
         <td>{getDate(tran.date)}</td>
-        <td>{tran.value}</td>
+        <td>{tran.value * 10 ** -18}</td>
         <td>{tran.gas}</td>
       </tr>
     )
